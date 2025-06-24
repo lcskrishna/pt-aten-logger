@@ -1,0 +1,233 @@
+/home-folder/work/study/pt-aten-logger/pt_aten_logger/test2.py:28: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /sgl-workspace/pytorch/aten/src/ATen/native/Scalar.cpp:22.)
+  return loss.item()
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=22.64us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4604d130>,) Outputs=None] -- ElapsedTime=9.71us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=76.33us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178054720', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1177954112] -- ElapsedTime=105.67us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1177954112', '[16, 1]:torch.float32:cpu:1177892160') Outputs=[]:torch.float32:cpu:1178066240] -- ElapsedTime=140.31us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1178066240',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178037888] -- ElapsedTime=28.25us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178037888', '[16, 1]:torch.float32:cpu:1177954112', '[16, 1]:torch.float32:cpu:1177892160', 1) Outputs=[16, 1]:torch.float32:cpu:1177841536] -- ElapsedTime=59.20us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1177841536',) Outputs=[1, 16]:torch.float32:cpu:1177841536] -- ElapsedTime=9.38us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1177841536', '[16, 10]:torch.float32:cpu:1178054720') Outputs=[1, 10]:torch.float32:cpu:1178116096] -- ElapsedTime=14.11us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178116096',) Outputs=[10, 1]:torch.float32:cpu:1178116096] -- ElapsedTime=2.34us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1177841536', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178117376] -- ElapsedTime=21.95us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178117376', [1]) Outputs=[1]:torch.float32:cpu:1178117376] -- ElapsedTime=9.90us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178117376',) Outputs=[1]:torch.float32:cpu:1178117376] -- ElapsedTime=5.45us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178117376',) Outputs=[1]:torch.float32:cpu:1178117376] -- ElapsedTime=3.73us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178116096',) Outputs=[1, 10]:torch.float32:cpu:1178116096] -- ElapsedTime=2.58us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178116096',) Outputs=[1, 10]:torch.float32:cpu:1178116096] -- ElapsedTime=1.86us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178116096',) Outputs=[1, 10]:torch.float32:cpu:1178116096] -- ElapsedTime=2.00us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=15.95us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178116096') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=20.92us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178117376') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=4.70us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x45efc5a0>,) Outputs=None] -- ElapsedTime=13.47us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1178066240',) Outputs=1.4181642532348633] -- ElapsedTime=4.86us
+Epoch 1, Loss: 1.4182
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=9.85us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638a500>,) Outputs=None] -- ElapsedTime=7.93us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=6.79us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178120640', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116480] -- ElapsedTime=24.23us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116480', '[16, 1]:torch.float32:cpu:1177891328') Outputs=[]:torch.float32:cpu:1177954112] -- ElapsedTime=41.73us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1177954112',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178118080] -- ElapsedTime=11.66us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178118080', '[16, 1]:torch.float32:cpu:1178116480', '[16, 1]:torch.float32:cpu:1177891328', 1) Outputs=[16, 1]:torch.float32:cpu:1178118144] -- ElapsedTime=12.33us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178118144',) Outputs=[1, 16]:torch.float32:cpu:1178118144] -- ElapsedTime=3.78us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178118144', '[16, 10]:torch.float32:cpu:1178120640') Outputs=[1, 10]:torch.float32:cpu:1178117952] -- ElapsedTime=6.05us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178117952',) Outputs=[10, 1]:torch.float32:cpu:1178117952] -- ElapsedTime=2.29us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178118144', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178118336] -- ElapsedTime=10.81us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178118336', [1]) Outputs=[1]:torch.float32:cpu:1178118336] -- ElapsedTime=6.43us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118336',) Outputs=[1]:torch.float32:cpu:1178118336] -- ElapsedTime=3.27us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118336',) Outputs=[1]:torch.float32:cpu:1178118336] -- ElapsedTime=2.82us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178117952',) Outputs=[1, 10]:torch.float32:cpu:1178117952] -- ElapsedTime=2.34us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178117952',) Outputs=[1, 10]:torch.float32:cpu:1178117952] -- ElapsedTime=1.83us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178117952',) Outputs=[1, 10]:torch.float32:cpu:1178117952] -- ElapsedTime=2.00us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=8.76us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178117952') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=8.34us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178118336') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.60us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46091e60>,) Outputs=None] -- ElapsedTime=8.22us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1177954112',) Outputs=1.2682870626449585] -- ElapsedTime=2.65us
+Epoch 2, Loss: 1.2683
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=7.50us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638a8c0>,) Outputs=None] -- ElapsedTime=9.41us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=5.03us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178121472', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116288] -- ElapsedTime=15.70us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177959232') Outputs=[]:torch.float32:cpu:1178116480] -- ElapsedTime=27.74us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1178116480',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1177841024] -- ElapsedTime=10.29us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1177841024', '[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177959232', 1) Outputs=[16, 1]:torch.float32:cpu:1177954112] -- ElapsedTime=10.41us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1177954112',) Outputs=[1, 16]:torch.float32:cpu:1177954112] -- ElapsedTime=3.20us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1177954112', '[16, 10]:torch.float32:cpu:1178121472') Outputs=[1, 10]:torch.float32:cpu:1178118912] -- ElapsedTime=5.46us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178118912',) Outputs=[10, 1]:torch.float32:cpu:1178118912] -- ElapsedTime=2.27us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1177954112', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178120640] -- ElapsedTime=8.95us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178120640', [1]) Outputs=[1]:torch.float32:cpu:1178120640] -- ElapsedTime=5.84us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178120640',) Outputs=[1]:torch.float32:cpu:1178120640] -- ElapsedTime=2.50us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178120640',) Outputs=[1]:torch.float32:cpu:1178120640] -- ElapsedTime=2.78us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178118912',) Outputs=[1, 10]:torch.float32:cpu:1178118912] -- ElapsedTime=2.26us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118912',) Outputs=[1, 10]:torch.float32:cpu:1178118912] -- ElapsedTime=1.85us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118912',) Outputs=[1, 10]:torch.float32:cpu:1178118912] -- ElapsedTime=2.13us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=6.75us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178118912') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=7.09us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178120640') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.28us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x460c0950>,) Outputs=None] -- ElapsedTime=7.59us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1178116480',) Outputs=1.736825942993164] -- ElapsedTime=2.34us
+Epoch 3, Loss: 1.7368
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.01us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638b1c0>,) Outputs=None] -- ElapsedTime=6.37us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.05us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178122176', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116288] -- ElapsedTime=10.97us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328') Outputs=[]:torch.float32:cpu:1177959232] -- ElapsedTime=22.20us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1177959232',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178121024] -- ElapsedTime=8.54us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178121024', '[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328', 1) Outputs=[16, 1]:torch.float32:cpu:1178121088] -- ElapsedTime=8.71us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178121088',) Outputs=[1, 16]:torch.float32:cpu:1178121088] -- ElapsedTime=2.68us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178121088', '[16, 10]:torch.float32:cpu:1178122176') Outputs=[1, 10]:torch.float32:cpu:1178118080] -- ElapsedTime=4.69us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178118080',) Outputs=[10, 1]:torch.float32:cpu:1178118080] -- ElapsedTime=2.18us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178121088', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178118272] -- ElapsedTime=7.43us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178118272', [1]) Outputs=[1]:torch.float32:cpu:1178118272] -- ElapsedTime=4.78us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118272',) Outputs=[1]:torch.float32:cpu:1178118272] -- ElapsedTime=2.22us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118272',) Outputs=[1]:torch.float32:cpu:1178118272] -- ElapsedTime=2.67us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178118080',) Outputs=[1, 10]:torch.float32:cpu:1178118080] -- ElapsedTime=2.14us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118080',) Outputs=[1, 10]:torch.float32:cpu:1178118080] -- ElapsedTime=1.78us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118080',) Outputs=[1, 10]:torch.float32:cpu:1178118080] -- ElapsedTime=1.91us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.96us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178118080') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=6.09us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178118272') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.37us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46331be0>,) Outputs=None] -- ElapsedTime=7.78us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1177959232',) Outputs=1.737410306930542] -- ElapsedTime=1.98us
+Epoch 4, Loss: 1.7374
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.06us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638a880>,) Outputs=None] -- ElapsedTime=6.03us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.10us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178123200', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1177018560] -- ElapsedTime=9.56us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1177018560', '[16, 1]:torch.float32:cpu:1177841088') Outputs=[]:torch.float32:cpu:1178116288] -- ElapsedTime=20.56us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1178116288',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178118080] -- ElapsedTime=8.06us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178118080', '[16, 1]:torch.float32:cpu:1177018560', '[16, 1]:torch.float32:cpu:1177841088', 1) Outputs=[16, 1]:torch.float32:cpu:1178118144] -- ElapsedTime=7.79us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178118144',) Outputs=[1, 16]:torch.float32:cpu:1178118144] -- ElapsedTime=2.70us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178118144', '[16, 10]:torch.float32:cpu:1178123200') Outputs=[1, 10]:torch.float32:cpu:1178117440] -- ElapsedTime=4.24us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178117440',) Outputs=[10, 1]:torch.float32:cpu:1178117440] -- ElapsedTime=2.13us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178118144', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178118464] -- ElapsedTime=7.95us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178118464', [1]) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=4.85us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118464',) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=2.25us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118464',) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=2.72us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178117440',) Outputs=[1, 10]:torch.float32:cpu:1178117440] -- ElapsedTime=2.31us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178117440',) Outputs=[1, 10]:torch.float32:cpu:1178117440] -- ElapsedTime=1.69us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178117440',) Outputs=[1, 10]:torch.float32:cpu:1178117440] -- ElapsedTime=2.00us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.02us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178117440') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=5.89us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178118464') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.22us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46310b10>,) Outputs=None] -- ElapsedTime=7.94us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1178116288',) Outputs=1.6631243228912354] -- ElapsedTime=2.15us
+Epoch 5, Loss: 1.6631
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.35us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x22733dc0>,) Outputs=None] -- ElapsedTime=5.87us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.50us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178122240', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116288] -- ElapsedTime=9.87us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328') Outputs=[]:torch.float32:cpu:1177959232] -- ElapsedTime=21.20us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1177959232',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178118080] -- ElapsedTime=8.43us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178118080', '[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328', 1) Outputs=[16, 1]:torch.float32:cpu:1178117440] -- ElapsedTime=8.22us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178117440',) Outputs=[1, 16]:torch.float32:cpu:1178117440] -- ElapsedTime=2.93us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178117440', '[16, 10]:torch.float32:cpu:1178122240') Outputs=[1, 10]:torch.float32:cpu:1177841600] -- ElapsedTime=4.44us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1177841600',) Outputs=[10, 1]:torch.float32:cpu:1177841600] -- ElapsedTime=2.13us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178117440', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178118464] -- ElapsedTime=7.95us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178118464', [1]) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=4.43us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118464',) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=2.35us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178118464',) Outputs=[1]:torch.float32:cpu:1178118464] -- ElapsedTime=2.86us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1177841600',) Outputs=[1, 10]:torch.float32:cpu:1177841600] -- ElapsedTime=2.21us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1177841600',) Outputs=[1, 10]:torch.float32:cpu:1177841600] -- ElapsedTime=1.88us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1177841600',) Outputs=[1, 10]:torch.float32:cpu:1177841600] -- ElapsedTime=2.05us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.17us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1177841600') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=6.58us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178118464') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.63us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x463828e0>,) Outputs=None] -- ElapsedTime=8.48us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1177959232',) Outputs=0.6030654907226562] -- ElapsedTime=2.28us
+Epoch 6, Loss: 0.6031
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.11us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638a940>,) Outputs=None] -- ElapsedTime=5.91us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.29us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178123200', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178120640] -- ElapsedTime=9.63us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178120640', '[16, 1]:torch.float32:cpu:1177841792') Outputs=[]:torch.float32:cpu:1178116288] -- ElapsedTime=20.15us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1178116288',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1177959232] -- ElapsedTime=7.81us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1177959232', '[16, 1]:torch.float32:cpu:1178120640', '[16, 1]:torch.float32:cpu:1177841792', 1) Outputs=[16, 1]:torch.float32:cpu:1178122560] -- ElapsedTime=7.87us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178122560',) Outputs=[1, 16]:torch.float32:cpu:1178122560] -- ElapsedTime=2.51us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178122560', '[16, 10]:torch.float32:cpu:1178123200') Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=4.32us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[10, 1]:torch.float32:cpu:1178122752] -- ElapsedTime=2.11us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178122560', [0], True) Outputs=[1, 1]:torch.float32:cpu:1177841536] -- ElapsedTime=7.36us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1177841536', [1]) Outputs=[1]:torch.float32:cpu:1177841536] -- ElapsedTime=4.21us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1177841536',) Outputs=[1]:torch.float32:cpu:1177841536] -- ElapsedTime=2.23us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1177841536',) Outputs=[1]:torch.float32:cpu:1177841536] -- ElapsedTime=2.66us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=2.16us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=1.72us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=1.93us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.88us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178122752') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=6.38us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1177841536') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.61us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46346f60>,) Outputs=None] -- ElapsedTime=7.86us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1178116288',) Outputs=1.5549952983856201] -- ElapsedTime=2.03us
+Epoch 7, Loss: 1.5550
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.64us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4604d130>,) Outputs=None] -- ElapsedTime=5.68us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.43us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178121408', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116288] -- ElapsedTime=10.46us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328') Outputs=[]:torch.float32:cpu:1177954112] -- ElapsedTime=19.98us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1177954112',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1178124800] -- ElapsedTime=7.48us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1178124800', '[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177891328', 1) Outputs=[16, 1]:torch.float32:cpu:1178120640] -- ElapsedTime=7.96us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178120640',) Outputs=[1, 16]:torch.float32:cpu:1178120640] -- ElapsedTime=2.28us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178120640', '[16, 10]:torch.float32:cpu:1178121408') Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=4.90us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[10, 1]:torch.float32:cpu:1178122752] -- ElapsedTime=2.03us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178120640', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178119040] -- ElapsedTime=7.26us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178119040', [1]) Outputs=[1]:torch.float32:cpu:1178119040] -- ElapsedTime=4.53us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178119040',) Outputs=[1]:torch.float32:cpu:1178119040] -- ElapsedTime=2.05us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178119040',) Outputs=[1]:torch.float32:cpu:1178119040] -- ElapsedTime=2.82us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=2.16us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=1.84us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178122752',) Outputs=[1, 10]:torch.float32:cpu:1178122752] -- ElapsedTime=1.90us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.80us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178122752') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=5.77us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178119040') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.16us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46310b10>,) Outputs=None] -- ElapsedTime=7.80us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1177954112',) Outputs=1.9508594274520874] -- ElapsedTime=1.96us
+Epoch 8, Loss: 1.9509
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.26us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638ab80>,) Outputs=None] -- ElapsedTime=5.88us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.00us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178124864', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1178116288] -- ElapsedTime=12.40us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177724736') Outputs=[]:torch.float32:cpu:1177954112] -- ElapsedTime=22.14us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1177954112',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1177891328] -- ElapsedTime=9.46us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1177891328', '[16, 1]:torch.float32:cpu:1178116288', '[16, 1]:torch.float32:cpu:1177724736', 1) Outputs=[16, 1]:torch.float32:cpu:1178118400] -- ElapsedTime=9.64us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178118400',) Outputs=[1, 16]:torch.float32:cpu:1178118400] -- ElapsedTime=3.91us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178118400', '[16, 10]:torch.float32:cpu:1178124864') Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=5.93us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[10, 1]:torch.float32:cpu:1178118848] -- ElapsedTime=3.26us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178118400', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178122752] -- ElapsedTime=8.11us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178122752', [1]) Outputs=[1]:torch.float32:cpu:1178122752] -- ElapsedTime=4.76us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178122752',) Outputs=[1]:torch.float32:cpu:1178122752] -- ElapsedTime=2.06us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178122752',) Outputs=[1]:torch.float32:cpu:1178122752] -- ElapsedTime=2.61us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=2.27us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=1.62us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=1.86us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=5.54us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178118848') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=5.75us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178122752') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=3.24us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x46368610>,) Outputs=None] -- ElapsedTime=7.01us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1177954112',) Outputs=0.6619532704353333] -- ElapsedTime=1.88us
+Epoch 9, Loss: 0.6620
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.zero_grad#SGD.zero_grad',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.71us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4638ba00>,) Outputs=None] -- ElapsedTime=5.78us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:591900736',) Outputs=[10, 1]:torch.float32:cpu:591900736] -- ElapsedTime=3.49us
+![PTATenLog addmm.default Inputs=('[1]:torch.float32:cpu:591729984', '[16, 10]:torch.float32:cpu:1178121088', '[10, 1]:torch.float32:cpu:591900736') Outputs=[16, 1]:torch.float32:cpu:1177724736] -- ElapsedTime=10.16us
+![PTATenLog mse_loss.default Inputs=('[16, 1]:torch.float32:cpu:1177724736', '[16, 1]:torch.float32:cpu:1178122560') Outputs=[]:torch.float32:cpu:1178120640] -- ElapsedTime=20.24us
+![PTATenLog ones_like.default Inputs=('[]:torch.float32:cpu:1178120640',) kwargs={'pin_memory': False, 'memory_format': torch.preserve_format} Outputs=[]:torch.float32:cpu:1177954112] -- ElapsedTime=7.33us
+![PTATenLog mse_loss_backward.default Inputs=('[]:torch.float32:cpu:1177954112', '[16, 1]:torch.float32:cpu:1177724736', '[16, 1]:torch.float32:cpu:1178122560', 1) Outputs=[16, 1]:torch.float32:cpu:1178121856] -- ElapsedTime=7.59us
+![PTATenLog t.default Inputs=('[16, 1]:torch.float32:cpu:1178121856',) Outputs=[1, 16]:torch.float32:cpu:1178121856] -- ElapsedTime=2.45us
+![PTATenLog mm.default Inputs=('[1, 16]:torch.float32:cpu:1178121856', '[16, 10]:torch.float32:cpu:1178121088') Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=4.21us
+![PTATenLog t.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[10, 1]:torch.float32:cpu:1178118848] -- ElapsedTime=1.88us
+![PTATenLog sum.dim_IntList Inputs=('[16, 1]:torch.float32:cpu:1178121856', [0], True) Outputs=[1, 1]:torch.float32:cpu:1178122688] -- ElapsedTime=7.14us
+![PTATenLog view.default Inputs=('[1, 1]:torch.float32:cpu:1178122688', [1]) Outputs=[1]:torch.float32:cpu:1178122688] -- ElapsedTime=4.02us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178122688',) Outputs=[1]:torch.float32:cpu:1178122688] -- ElapsedTime=2.04us
+![PTATenLog detach.default Inputs=('[1]:torch.float32:cpu:1178122688',) Outputs=[1]:torch.float32:cpu:1178122688] -- ElapsedTime=2.55us
+![PTATenLog t.default Inputs=('[10, 1]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=2.05us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=1.65us
+![PTATenLog detach.default Inputs=('[1, 10]:torch.float32:cpu:1178118848',) Outputs=[1, 10]:torch.float32:cpu:1178118848] -- ElapsedTime=1.61us
+![PTATenLog _record_function_enter_new.default Inputs=('Optimizer.step#SGD.step',) Outputs=ScriptObject <__torch__.torch.classes.profiler._RecordFunction>] -- ElapsedTime=4.34us
+![PTATenLog add_.Tensor Inputs=('[1, 10]:torch.float32:cpu:591900736', '[1, 10]:torch.float32:cpu:1178118848') kwargs={'alpha': -0.01} Outputs=[1, 10]:torch.float32:cpu:591900736] -- ElapsedTime=5.62us
+![PTATenLog add_.Tensor Inputs=('[1]:torch.float32:cpu:591729984', '[1]:torch.float32:cpu:1178122688') kwargs={'alpha': -0.01} Outputs=[1]:torch.float32:cpu:591729984] -- ElapsedTime=2.98us
+![PTATenLog _record_function_exit._RecordFunction Inputs=(<torch.ScriptObject object at 0x4637b2f0>,) Outputs=None] -- ElapsedTime=7.50us
+![PTATenLog _local_scalar_dense.default Inputs=('[]:torch.float32:cpu:1178120640',) Outputs=0.9239423274993896] -- ElapsedTime=1.87us
+Epoch 10, Loss: 0.9239

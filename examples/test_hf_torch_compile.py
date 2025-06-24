@@ -18,7 +18,7 @@ def main():
                 device_map='cuda'
             )
 
-    model = torch.compile(model)
+    model = torch.compile(model, mode="reduce-overhead")
 
     prompt = "Why sun rises in the east?"
 

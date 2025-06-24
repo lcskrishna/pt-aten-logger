@@ -3,9 +3,19 @@ from torch.utils._python_dispatch import TorchDispatchMode
 
 import time
 
+import triton
+
+orig = triton.runtime.JITFunction.__call__
+
+def custom_call(self, *args, **kwargs):
+    print(f"[Triton] Launching kernel: {self.fn.__name__}")
+    return orig(self, *args, **kwargs)
+
+triton.runtime.JITFunction.__call__ = custom_call
+
 def _extract(desc):
     if isinstance(desc, torch.Tensor):
-        return f"{list(desc.shape)}:{desc.dtype}:{desc.device}"
+        return f"{list(desc.shape)}:{desc.dtype}:{desc.device}:{desc.data_ptr()}"
     elif isinstance(desc, (list, tuple)):
         return type(desc)(_extract(x) for x in desc)
     elif isinstance(desc, dict):
